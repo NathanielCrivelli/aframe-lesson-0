@@ -12,19 +12,12 @@
     </a-assets>
 
     <a-scene>
-      <a-entity rotation="0 0 0">
-        <a-box position="-1 2 -3" rotation="0 0 0" color="#4CC3D9" src="#paper-texture"></a-box>
-        <a-sphere position="0 1.25 -10" radius="1.25" color="#EF2D5E">
-          <a-ring position="3 2 -4"></a-ring>
-        </a-sphere>
-        <a-cylinder position="1 2 -3" radius="0.5" height="1.5" color="#FFC65D" rotation="90 0 0"></a-cylinder>
-      </a-entity>
+      <a-entity geometry="primitive: cylinder" position="-1 2 -3" rotation="0 0 0" color="#4CC3D9" src="#paper-texture"></a-entity>
+      <a-entity geometry="primitive: sphere" position="0 1.25 -10" radius="1.25" color="#EF2D5E"></a-entity>
+      <a-entity geometry="primitive: box" position="1 2 -3" radius="0.5" height="1.5" color="#FFC65D" rotation="90 0 0"></a-entity>
 
-      <a-torus-knot dynamic-body position="-5 0 -5"></a-torus-knot>
-      <a-dodecahedron position="5 0 -5"></a-dodecahedron>
-      <a-text position="-0.5 2 -2" value="My A-Frame Scene"></a-text>
-      <a-plane static-body position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-entity geometry="primitive: plane" position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-entity>
+      <a-entity geometry="primitive: sphere; radius: 100" material="shader: side" position="0 0 0"></a-entity>
     </a-scene>
   </body>
 </html>
