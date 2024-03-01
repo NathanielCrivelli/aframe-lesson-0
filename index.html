@@ -4,7 +4,6 @@
     <title>Hello, WebVR! - A-Frame</title>
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
   </head>
   <body>
     <a-assets>
@@ -12,12 +11,25 @@
     </a-assets>
 
     <a-scene>
-      <a-entity geometry="primitive: cylinder" position="-1 2 -3" rotation="0 0 0" color="#4CC3D9" src="#paper-texture"></a-entity>
-      <a-entity geometry="primitive: sphere" position="0 1.25 -10" radius="1.25" color="#EF2D5E"></a-entity>
-      <a-entity geometry="primitive: box" position="1 2 -3" radius="0.5" height="1.5" color="#FFC65D" rotation="90 0 0"></a-entity>
+      <a-entity geometry="primitive: sphere" material="color: white" position="-5 3 -8">
+        <a-animation
+        attribute="position"
+        to="5 3 -8"
+        from="-5 3 -8"
+        dur="2000"
+        repeat="indefinite"
+        direction="alternate">
+        </a-animation>
+      </a-entity>
+      <a-entity geometry="primitive: box" material="color: red" position="0 0.5 -9"></a-entity>
+      <a-entity geometry="primitive: box" material="color: blue" position="-2 0.5 -8"></a-entity>
+      <a-entity geometry="primitive: box" material="color: green" position="2 0.5 -8"></a-entity>
+      <a-entity geometry="primitive: box" material="color: orange" position="-4 0.5 -7"></a-entity>
+      <a-entity geometry="primitive: box" material="color: yellow" position="4 0.5 -7"></a-entity>
 
-      <a-entity geometry="primitive: plane" position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-entity>
-      <a-entity geometry="primitive: sphere; radius: 100" material="shader: side" position="0 0 0"></a-entity>
+      <a-entity geometry="primitive: sphere; radius: 10000"
+        material="color: teal; shader: flat; side: double"
+        position="0 0 0"></a-entity>
     </a-scene>
   </body>
 </html>
