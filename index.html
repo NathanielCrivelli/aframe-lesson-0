@@ -4,6 +4,7 @@
     <title>Hello, WebVR! - A-Frame</title>
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="​https://ideaspacevr.github.io/aframe-particle-system-component/dist/aframe-particle-system-component.js"></script>
   </head>
   <body>
     <a-assets>
@@ -11,24 +12,18 @@
     </a-assets>
 
     <a-scene>
-      <a-entity geometry="primitive: sphere" material="color: white" position="-5 3 -8">
-        <a-animation
-        attribute="position"
-        to="5 3 -8"
-        from="-5 3 -8"
-        dur="2000"
-        repeat="indefinite"
-        direction="alternate">
-        </a-animation>
-      </a-entity>
+      <a-entity geometry="primitive: sphere" material="color: white" position="-5 3 -8"
+        animation="property: position; to: 5 3 -8; from: -5 3 -8; dur: 2000; loop: true; dir: alternate"
+        animation__2="property: scale; to: 1.5 1.5 1.5; from: 1 1 1; dur: 1000; loop: true; dir: alternate"></a-entity>
       <a-entity geometry="primitive: box" material="color: red" position="0 0.5 -9"></a-entity>
       <a-entity geometry="primitive: box" material="color: blue" position="-2 0.5 -8"></a-entity>
       <a-entity geometry="primitive: box" material="color: green" position="2 0.5 -8"></a-entity>
       <a-entity geometry="primitive: box" material="color: orange" position="-4 0.5 -7"></a-entity>
       <a-entity geometry="primitive: box" material="color: yellow" position="4 0.5 -7"></a-entity>
+      <a-entity position="0 0 -4" preset="snow" size="4"></a-entity>
 
       <a-entity geometry="primitive: sphere; radius: 10000"
-        material="color: teal; shader: flat; side: double"
+        material="color: black; shader: flat; side: double"
         position="0 0 0"></a-entity>
     </a-scene>
   </body>
